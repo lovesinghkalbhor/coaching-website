@@ -1,0 +1,112 @@
+.contactUsCard {
+  position: relative;
+  width: 90%;
+  height: auto;
+  border-radius: 1.6rem;
+  padding: 2.5rem 4rem;
+  margin: auto;
+  overflow: hidden;
+
+  background: rgb(126, 110, 255);
+  background: linear-gradient(
+    49deg,
+    rgba(126, 110, 255, 1) 19%,
+    rgba(61, 184, 255, 1) 100%
+  );
+
+  @media (max-width: 640px) {
+    padding: 2.5rem 2rem;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+}
+
+.contactuscard__imgcontainer {
+  position: relative;
+  height: 110vh;
+
+  /* max-width: 1024px; */
+
+  /* margin: auto; */
+  max-height: 900px;
+
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.contactuscard__planeImage {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+
+  top: -300px;
+  left: 55px; /* 1/3 */
+
+  /* border: 4px solid #f00; */
+  transform: scale(1.6);
+}
+
+.contactuscard__wave1Image {
+  position: absolute;
+  opacity: 0.9;
+  z-index: 0;
+
+  width: 800px;
+  top: -60px;
+  height: 150px;
+  left: -150px; /* 1/3 */
+  /* -12 in Tailwind CSS is equivalent to -3rem */
+  z-index: 0;
+
+  /* border: 4px solid rgb(204, 255, 0); */
+  transform: scale(1) rotate(175deg);
+}
+.contactuscard__bubble2Image {
+  position: absolute;
+  width: 130px;
+  z-index: 0;
+
+  height: auto;
+  top: 50px;
+  left: 740px; /* 1/3 */
+  /* -12 in Tailwind CSS is equivalent to -3rem */
+  z-index: 0;
+
+  /* border: 4px solid rgb(204, 255, 0); */
+  transform: scale(1);
+}
+
+.contactuscard__bubble1Image {
+  position: absolute;
+  width: 80px;
+  z-index: 0;
+
+  height: auto;
+  top: 90px;
+  left: 80px; /* 1/3 */
+
+  transform: scale(1);
+}
+
+.contactUsCard__textcontent div {
+  display: flex;
+  gap: 2rem;
+  color: white;
+  z-index: 3;
+}
+.contactUsCard__textcontent h6 {
+  font-size: large;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+}

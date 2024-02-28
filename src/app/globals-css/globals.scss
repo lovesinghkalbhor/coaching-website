@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+
+    // @media (max-width: 768px) {
+    //   font-size: 90%;
+    // }
+    // @media (max-width: 640px) {
+    //   font-size: 80%;
+    // }
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+.hero {
+  /* height: 100vh; */
+  width: 100%;
+  background: rgb(126, 110, 255);
+  background: linear-gradient(
+    49deg,
+    rgba(126, 110, 255, 1) 19%,
+    rgba(61, 184, 255, 1) 100%
+  );
+}
+.hero__textcontent {
+  // w-full text-center md:text-start
+  z-index: 1;
+  width: 100%;
+  text-align: start;
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-top: 5rem;
+    max-width: 85%;
+  }
+  @media (max-width: 640px) {
+    text-align: center;
+    // margin-top: rem;
+  }
+  @media (max-width: 414px) {
+    text-align: center;
+    // margin-top: rem;
+    max-width: 100%;
+  }
+
+  & p {
+    // text-white py-2 text-sm sm:text-md lg:text-lg
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem;
+
+    @media (max-width: 640px) {
+      font-size: 0.875rem /* 14px */;
+      line-height: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      font-size: 1rem /* 16px */;
+      line-height: 1.5rem;
+    }
+  }
+  & h1 {
+    color: white;
+    font-weight: 600;
+
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @media (min-width: 640px) {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+    @media (min-width: 768px) {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  }
+}
+// .other_page_hero__textcontent {
+//   width: 80%;
+//   margin-left: 2.5rem;
+// }
+
+.section {
+  /* margin-top: 5rem; */
+  padding-bottom: 3.5rem;
+  padding-top: 5rem;
+  padding-left: 4rem;
+
+  padding-right: 4rem;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 3.5rem;
+    padding-top: 5rem;
+    padding-left: 3rem;
+
+    padding-right: 1rem;
+  }
+  @media (max-width: 640px) {
+    padding-bottom: 3.5rem;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+
+    padding-right: 1rem;
+  }
+}
+
+.section__planeImage {
+  position: absolute;
+  z-index: 0;
+  filter: invert(1);
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  opacity: 0.8;
+  top: -520px;
+  left: -55px;
+  transform: scale(1.6) rotate(13deg);
+}
+
+.section__heading__container {
+  @media (max-width: 640px) {
+    margin-left: 2rem;
+  }
+  @media (max-width: 414px) {
+    margin-left: 0.5rem;
+  }
+}
+
+.section__span {
+  /* text-xl text-teal-400 font-medium */
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(6, 210, 210);
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+}
+.section__heading {
+  /* text-3xl font-medium mt-4  */
+  font-size: 1.98rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 4.5rem;
+
+  @media (max-width: 640px) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
+  @media (max-width: 414px) {
+    font-weight: 500;
+  }
+}
+
+.section__para {
+  font-size: 1.1rem;
+  margin-top: 3.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  max-width: 90%;
+
+  @media (max-width: 640px) {
+    max-width: 95%;
+
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+  // @media (max-width: 414px) {
+  //   font-size: 0.9rem;
+  //   line-height: 1.8rem;
+  // }
+}
+
+// cards hover effect
+.card-hover-effect {
+  transition-duration: 500ms;
+
+  &:hover {
+    box-shadow: none;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+    transform: scale(0.97); // transform-style: ;
+  }
+}
+
+/* contact us card  */
+/* footer */
