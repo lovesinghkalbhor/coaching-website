@@ -39,15 +39,41 @@
   position: absolute;
   width: 100%;
   z-index: 0;
-  top: 200px;
+  bottom: 0px;
   height: 100%;
-  left: 800px; /* 1/3 */
-  /* -12 in Tailwind CSS is equivalent to -3rem */
+  right: 0px; /* 1/3 */
   z-index: 0;
-  -o-object-fit: none;
-     object-fit: none;
+  -o-object-fit: cover;
+     object-fit: cover;
   /* border: 4px solid rgb(204, 255, 0); */
-  transform: scale(1.8) rotate(-50deg);
+  transform: scale(1.8) rotate(8deg);
+}
+
+.hero__sub_wave_1Image {
+  position: absolute;
+  min-width: 100%;
+  height: 6rem;
+  bottom: 0px;
+  z-index: 0;
+  /* border: 4px solid rgb(204, 255, 0); */
+}
+
+.hero__sub_wave_2Image {
+  position: absolute;
+  min-width: 100%;
+  height: 7rem;
+  bottom: 0px;
+  z-index: 0;
+  /* border: 4px solid rgb(204, 255, 0); */
+}
+
+.hero__sub_wave_3Image {
+  position: absolute;
+  min-width: 100%;
+  height: 8rem;
+  bottom: 0px;
+  z-index: 0;
+  /* border: 4px solid rgb(204, 255, 0); */
 }
 
 .hero__wave1Image {
@@ -72,7 +98,6 @@
   top: 50px;
   left: 940px; /* 1/3 */
   /* -12 in Tailwind CSS is equivalent to -3rem */
-  z-index: 0;
   /* border: 4px solid rgb(204, 255, 0); */
   transform: scale(1);
 }
@@ -171,6 +196,7 @@
   padding-left: 2rem;
   padding-bottom: 3.6rem;
   z-index: 1;
+  transition: all 0.7s ease-in-out;
   /* hover:shadow-none transition-all	duration-500 hover:scale-90 */
 }
 @media (max-width: 640px) {
@@ -196,6 +222,10 @@
     padding-bottom: 2.2rem;
     margin-bottom: 2rem;
   }
+}
+
+.coloredcards__card:active {
+  transform: scale(0.9);
 }
 
 .coloredcards__p {

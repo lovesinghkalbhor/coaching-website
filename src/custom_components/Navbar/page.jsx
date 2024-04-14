@@ -7,13 +7,21 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className=" md:p-2 mx-0 md:px-8 fixed z-20   w-full bg-slate-100 shadow-2xl">
+    <div className="z-50 md:p-2 mx-0 md:px-8 fixed    w-full bg-slate-100 shadow-2xl">
       <div className=" hidden  container mx-auto md:flex justify-between relative content-center flex-wrap ">
-        <h1 className="font-bold my-auto ">Logo ipsum</h1>
+        <h1 className="font-bold my-auto hover:animate-bounce cursor-pointer ">
+          Arvind kumar
+        </h1>
         <NavbarLink></NavbarLink>
-        <Button size="sm">
-          <Phone className="mr-2 h-4 w-4" /> Contact us
-        </Button>
+
+        <Link href="#contact_us">
+          <Button
+            size="sm"
+            className="active:scale-95  transition-all duration-300"
+          >
+            <Phone className="mr-2 h-4 w-4" /> Contact us
+          </Button>
+        </Link>
       </div>
 
       <div className="md:hidden block">
@@ -68,7 +76,7 @@ export default function Navbar() {
               <div className="w-10 rounded-full">
                 <Image
                   alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  // src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                   width={100}
                   height={100}
                 ></Image>

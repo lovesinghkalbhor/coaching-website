@@ -1,6 +1,7 @@
 .other_page_hero {
   width: 100%;
   background: rgb(126, 110, 255);
+  position: relative;
   background: linear-gradient(
     49deg,
     rgba(126, 110, 255, 1) 19%,
@@ -11,14 +12,8 @@
 .other_page_hero__imgcontainer {
   position: relative;
   height: 70vh;
-
-  /* max-width: 1024px; */
-
-  /* margin: auto; */
   max-height: 500px;
-
   overflow: hidden;
-  /* border: 1px solid red; */
 }
 
 .other_page_hero__backgroundImage {
@@ -35,11 +30,8 @@
   width: 100%;
   height: 100%;
   object-fit: none;
-
   top: -200px;
-  left: 55px; /* 1/3 */
-
-  /* border: 4px solid #f00; */
+  left: 55px;
   transform: scale(1.6);
 }
 .other_page_hero__wave2Image {
@@ -49,11 +41,9 @@
 
   top: 200px;
   height: 100%;
-  left: 800px; /* 1/3 */
-  /* -12 in Tailwind CSS is equivalent to -3rem */
+  left: 800px;
   z-index: 0;
   object-fit: none;
-  /* border: 4px solid rgb(204, 255, 0); */
   transform: scale(1.8) rotate(-50deg);
 }
 .other_page_hero__wave1Image {
@@ -64,13 +54,45 @@
   width: 1200px;
   top: -120px;
   height: 300px;
-  left: -330px; /* 1/3 */
-  /* -12 in Tailwind CSS is equivalent to -3rem */
+  left: -330px;
   z-index: 0;
 
-  /* border: 4px solid rgb(204, 255, 0); */
   transform: scale(1) rotate(165deg);
 }
+
+.hero__sub_wave_1Image {
+  position: absolute;
+  min-width: 100%;
+  height: 6rem;
+
+  bottom: 0px;
+  z-index: 1;
+  /* object-fit: cover; */
+  /* border: 4px solid rgb(204, 255, 0); */
+}
+.hero__sub_wave_2Image {
+  position: absolute;
+  min-width: 100%;
+  height: 7rem;
+
+  /* top: 200px; */
+  bottom: 0px;
+  z-index: 1;
+  /* object-fit: cover; */
+  /* border: 4px solid rgb(204, 255, 0); */
+}
+.hero__sub_wave_3Image {
+  position: absolute;
+  min-width: 100%;
+  height: 8rem;
+
+  /* top: 200px; */
+  bottom: 0px;
+  z-index: 1;
+  /* object-fit: cover; */
+  /* border: 4px solid rgb(204, 255, 0); */
+}
+
 .other_page_hero__bubble2Image {
   position: absolute;
   width: 160px;

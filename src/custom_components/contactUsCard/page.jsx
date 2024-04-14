@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 
 export default function ContactUsCard() {
   return (
-    <div className="section container mx-auto  ">
+    <div id="contact_us" className="section container mx-auto  ">
       <div className={`${styles.contactUsCard} shadow-2xl card-hover-effect`}>
         <Image
           className={styles.contactuscard__wave1Image}
