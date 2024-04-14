@@ -1,7 +1,7 @@
-import Hero_other_pages from "@/custom_components/hero_section_for_other_page/page";
+"use client";
 
+import Hero_other_pages from "@/custom_components/hero_section_for_other_page/page";
 import Image from "next/image";
-import CoursesCard from "@/custom_components/coursescard/page";
 
 export default function Courses() {
   return (
