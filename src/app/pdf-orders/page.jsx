@@ -10,6 +10,8 @@ import { useRouter } from "next/navigation";
 
 export default function BuyCourse() {
   const [metaData, setmetaData] = useState({});
+  const [moreCourses, setmoreCourses] = useState([]);
+
   const router = useRouter();
   // const { order_id } = router.query; // Destructure order_id from query object
 
@@ -19,8 +21,10 @@ export default function BuyCourse() {
         `${process.env.NEXT_PUBLIC_DOMAIN}orders/download_content_page.php?order_token=39tr85nyl22e5e505bj2573vss5fdbgdensz92b6
           `
       );
-      setmetaData(response.data.course_details);
-      console.log(response.data.course_details);
+      if (response.data.status) {
+        setmetaData(response.data.course_details);
+        setmoreCourses(response.data.more_courses);
+      }
     };
 
     fetchData();

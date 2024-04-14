@@ -27,8 +27,6 @@ export default function BuyCourse() {
         setmetaData(response.data.course_details);
         setmoreCourses(response.data.more_courses);
       }
-
-      console.log(response.data.course_details);
     };
 
     fetchData();
